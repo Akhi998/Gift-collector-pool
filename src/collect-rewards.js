@@ -1,6 +1,7 @@
 import puppeteer from "puppeteer";
 import { logger } from "./logger.js";
 import { makeRewardData } from "./utils.js";
+import { downloadImageToArchive } from "./image-downloader.js";
 
 export const collectRewards = async (userUniqueID) => {
   const pageUrl = "https://8ballpool.com/en/shop";
@@ -96,7 +97,9 @@ export const collectRewards = async (userUniqueID) => {
     if (price === "FREE" || price === "CLAIMED") {
       logger("info", `⏳ Claiming: [${index + 1}/${N}]`);
       await priceButton.click();
-      rewards.push(makeRewardData(imageSrc, name, quantity));
+      const localPath = await downloadImageToArchive(imageSrc);
+      rewards.push(makeRewardData(localPath || imageSrc, name, quantity));
+      //rewards.push(makeRewardData(imageSrc, name, quantity));
       logger("success", `🎉 Claimed: [${index + 1}/${N}]`);
     }
   }
