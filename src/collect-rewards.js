@@ -85,8 +85,26 @@ export const collectRewards = async (userUniqueID) => {
     if (!priceButton) continue;
 
     const price = (await priceButton.evaluate((el) => (el.textContent || "").trim())).toUpperCase();
-    const imageElement = await product.$("img");
-    const imageSrc = imageElement ? await imageElement.evaluate(i => i.getAttribute("src")) : null;
+    const imageSrc = await product.evaluate((prod) => {
+      const imgs = Array.from(prod.querySelectorAll("img"));
+      if (!imgs.length) return null;
+    
+      let best = imgs[0];
+      let bestArea = 0;
+    
+      for (const img of imgs) {
+        const rect = img.getBoundingClientRect();
+        const area = (rect.width || 0) * (rect.height || 0);
+    
+        if (area > bestArea) {
+          bestArea = area;
+          best = img;
+        }
+      }
+    
+      return best ? best.src : imgs[0].src;
+    });
+    
     const nameElement = await product.$("h3");
     const name = nameElement ? await nameElement.evaluate((el) => el.textContent.trim()) : "Unknown";
     const qtyElem = await product.$(".amount-text");
