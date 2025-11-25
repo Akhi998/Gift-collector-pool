@@ -6,19 +6,22 @@
  *
  */
 export const makeRewardData = (imageSrcOrLocalPath, name, quantity) => {
-  // imageSrcOrLocalPath might be a remote URL or a saved local path (archive/...)
-  const src = imageSrcOrLocalPath || ""; // use empty if missing
-  const fallback = "https://via.placeholder.com/25?text=?";
-
-  // If src is relative (starts with archive/ or ./), keep it as-is.
-  // Use onerror to fallback to placeholder if still invalid when rendered.
-  return `<img src="${src}" height="25" alt="${escapeHtml(name)}" onerror="this.src='${fallback}'" /> ${escapeHtml(name)} ${escapeHtml(quantity)}`;
+  // If imageSrcOrLocalPath is a remote URL, prefer a local saved path (downloaded)
+  const src = imageSrcOrLocalPath || "";
+  // Use Markdown image syntax so GitHub renders correctly in tables too
+  // If src is empty we show only the name and qty
+  const imgMd = src ? `![${escapeAlt(name)}](${src})` : "";
+  return `${imgMd} ${escapeHtml(name)} ${escapeHtml(quantity)}`;
 };
 
 function escapeHtml(s = "") {
   return String(s).replace(/[&<>"']/g, ch => ({
     '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
   }[ch]));
+}
+
+function escapeAlt(s = "") {
+  return String(s).replace(/[\]\[]/g, '_'); // simple alt text cleanup
 }
 
 /**
