@@ -86,7 +86,7 @@ export const collectRewards = async (userUniqueID) => {
 
     const price = (await priceButton.evaluate((el) => (el.textContent || "").trim())).toUpperCase();
     const imageElement = await product.$("img");
-    const imageSrc = imageElement ? await imageElement.evaluate((i) => i.getAttribute("src")) : "";
+    const imageSrc = imageElement ? await imageElement.evaluate(i => i.getAttribute("src")) : null;
     const nameElement = await product.$("h3");
     const name = nameElement ? await nameElement.evaluate((el) => el.textContent.trim()) : "Unknown";
     const qtyElem = await product.$(".amount-text");
@@ -97,8 +97,10 @@ export const collectRewards = async (userUniqueID) => {
     if (price === "FREE" || price === "CLAIMED") {
       logger("info", `⏳ Claiming: [${index + 1}/${N}]`);
       await priceButton.click();
-      const localPath = await downloadImageToArchive(imageSrc);
-      rewards.push(makeRewardData(localPath || imageSrc, name, quantity));
+      const localPath = imageSrc ? await downloadImageToArchive(imageSrc) : null;
+      const imageRef = localPath ? localPath : imageSrc; // fallback to remote URL if needed
+
+      rewards.push(makeRewardData(imageRef, name, quantity));
       //rewards.push(makeRewardData(imageSrc, name, quantity));
       logger("success", `🎉 Claimed: [${index + 1}/${N}]`);
     }
