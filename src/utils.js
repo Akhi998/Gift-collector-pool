@@ -5,9 +5,21 @@
  * @param {string} quantity
  *
  */
-export const makeRewardData = (imageSrc, name, quantity) => {
-  return `<img src="${imageSrc}" height="25" alt="${name}"/> ${name} ${quantity}`;
+export const makeRewardData = (imageSrcOrLocalPath, name, quantity) => {
+  // imageSrcOrLocalPath might be a remote URL or a saved local path (archive/...)
+  const src = imageSrcOrLocalPath || ""; // use empty if missing
+  const fallback = "https://via.placeholder.com/25?text=?";
+
+  // If src is relative (starts with archive/ or ./), keep it as-is.
+  // Use onerror to fallback to placeholder if still invalid when rendered.
+  return `<img src="${src}" height="25" alt="${escapeHtml(name)}" onerror="this.src='${fallback}'" /> ${escapeHtml(name)} ${escapeHtml(quantity)}`;
 };
+
+function escapeHtml(s = "") {
+  return String(s).replace(/[&<>"']/g, ch => ({
+    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+  }[ch]));
+}
 
 /**
  *
