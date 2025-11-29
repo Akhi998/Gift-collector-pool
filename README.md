@@ -7,3 +7,5 @@
 | 11/27/2025 | ![Daily Reward - 11/27](archive/images/2025-11-27/7f5e61ad.png) Daily Reward - 11/27 1  ·  ![Opti Shot Cue Piece](archive/images/2025-11-27/0e1f2491.png) Opti Shot Cue Piece x1 |
 
 | 11/28/2025 | ![Daily Reward - 11/28](archive/images/2025-11-28/49459593.png) Daily Reward - 11/28 x1  ·  ![Spin Wizard Cue Piece](archive/images/2025-11-28/783156c8.png) Spin Wizard Cue Piece x2 |
+
+| 11/29/2025 | ![Daily Reward - 11/29](archive/images/2025-11-29/4fa7fb60.png) Daily Reward - 11/29 x1  ·  ![Gamechanger Cue Piece](archive/images/2025-11-29/bfdbd72f.png) Gamechanger Cue Piece x1 |
