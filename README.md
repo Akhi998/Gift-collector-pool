@@ -1,13 +1,29 @@
+<p align="center">
+  <img src="https://github.com/aditeyaS/8bp-free-gift-collector/blob/main/8bplogo.png" height="10%" />
+  <h2 align="center">8 Ball Pool Free Gift Collector</h3>
+  <p align="center">The <a href="https://8ballpool.com/en/shop" target="_blank">8 ball pool webiste</a> has free gifts everyday. This script collects those.</p>
+  <h4 align="center">Created by <a href="https://github.com/aditeyaS" target="_blank">@aditeyaS</a></h4>
+  <div>
+    <h4 align="center">Tech Stack</h4>
+    <p align="center">
+      <img height="40" width="40" src="https://cdn.simpleicons.org/javascript/F7DF1E" />
+      <img height="40" width="40" src="https://cdn.simpleicons.org/puppeteer/40B5A4" />
+      <img height="40" width="40" src="https://cdn.simpleicons.org/githubactions/2088FF" />
+    </p>
+  </div>
+  <p align="center">
+    <a href="SETUP.md" aria-label="View previous rewards">
+        <img src="https://img.shields.io/badge/Deploy_your_script-ff0000?style=for-the-badge&logo=probot&logoColor=ffffff&logoSize=auto"/>
+    </a>
+  </p>
+  <p align="center">
+    <a href="archive" aria-label="View previous rewards">
+      View previous rewards
+    </a>
+  </p>
+</p>
 
+| Date | Rewards |
+| :---: | :---: |
 
-| 11/25/2025 | ![Daily Reward - 11/25](archive/images/2025-11-25/49459593.png) Daily Reward - 11/25 x1  ·  ![Trickster Cue Piece](archive/images/2025-11-25/eee6d28d.png) Trickster Cue Piece x1 |
-
-| 11/26/2025 | ![Daily Reward - 11/26](archive/images/2025-11-26/e400715b.png) Daily Reward - 11/26 500  ·  ![Power Break Cue Piece](archive/images/2025-11-26/a2781179.png) Power Break Cue Piece x1 |
-
-| 11/27/2025 | ![Daily Reward - 11/27](archive/images/2025-11-27/7f5e61ad.png) Daily Reward - 11/27 1  ·  ![Opti Shot Cue Piece](archive/images/2025-11-27/0e1f2491.png) Opti Shot Cue Piece x1 |
-
-| 11/28/2025 | ![Daily Reward - 11/28](archive/images/2025-11-28/49459593.png) Daily Reward - 11/28 x1  ·  ![Spin Wizard Cue Piece](archive/images/2025-11-28/783156c8.png) Spin Wizard Cue Piece x2 |
-
-| 11/29/2025 | ![Daily Reward - 11/29](archive/images/2025-11-29/4fa7fb60.png) Daily Reward - 11/29 x1  ·  ![Gamechanger Cue Piece](archive/images/2025-11-29/bfdbd72f.png) Gamechanger Cue Piece x1 |
-
-| 11/30/2025 | ![Daily Reward - 11/30](archive/images/2025-11-30/d2756c4e.png) Daily Reward - 11/30 x1  ·  ![Opti Shot Cue Piece](archive/images/2025-11-30/0e1f2491.png) Opti Shot Cue Piece x1 |
+| 12/1/2025 | ![Daily Reward - 12/1](archive/images/2025-12-01/e400715b.png) Daily Reward - 12/1 500  ·  ![Spin Wizard Cue Piece](archive/images/2025-12-01/783156c8.png) Spin Wizard Cue Piece x1 |
