@@ -29,3 +29,5 @@
 | 12/1/2025 | ![Daily Reward - 12/1](archive/images/2025-12-01/e400715b.png) Daily Reward - 12/1 500  ·  ![Spin Wizard Cue Piece](archive/images/2025-12-01/783156c8.png) Spin Wizard Cue Piece x1 |
 
 | 12/2/2025 | ![Daily Reward - 12/2](archive/images/2025-12-02/7f5e61ad.png) Daily Reward - 12/2 1  ·  ![Gamechanger Cue Piece](archive/images/2025-12-02/bfdbd72f.png) Gamechanger Cue Piece x1 |
+
+| 12/3/2025 | ![Daily Reward - 12/3](archive/images/2025-12-03/8e3d056a.png) Daily Reward - 12/3 x30  ·  ![Power Break Cue Piece](archive/images/2025-12-03/a2781179.png) Power Break Cue Piece x1 |
