@@ -33,3 +33,5 @@
 | 12/3/2025 | ![Daily Reward - 12/3](archive/images/2025-12-03/8e3d056a.png) Daily Reward - 12/3 x30  ·  ![Power Break Cue Piece](archive/images/2025-12-03/a2781179.png) Power Break Cue Piece x1 |
 
 | 12/4/2025 | ![Daily Reward - 12/4](archive/images/2025-12-04/7f5e61ad.png) Daily Reward - 12/4 1  ·  ![Trickster Cue Piece](archive/images/2025-12-04/eee6d28d.png) Trickster Cue Piece x1 |
+
+| 12/5/2025 | ![Daily Reward - 12/5](archive/images/2025-12-05/49459593.png) Daily Reward - 12/5 x1  ·  ![Legacy Strike Cue Piece](archive/images/2025-12-05/cad66ade.png) Legacy Strike Cue Piece x2 |
