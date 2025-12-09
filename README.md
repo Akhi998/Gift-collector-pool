@@ -41,3 +41,5 @@
 | 12/7/2025 | ![Daily Reward - 12/7](archive/images/2025-12-07/4fa7fb60.png) Daily Reward - 12/7 x1  ·  ![Spin Wizard Cue Piece](archive/images/2025-12-07/783156c8.png) Spin Wizard Cue Piece x1 |
 
 | 12/8/2025 | ![Daily Reward - 12/8](archive/images/2025-12-08/ca13cc8d.png) Daily Reward - 12/8 x1  ·  ![Legacy Strike Cue Piece](archive/images/2025-12-08/cad66ade.png) Legacy Strike Cue Piece x1 |
+
+| 12/9/2025 | ![Daily Reward - 12/9](archive/images/2025-12-09/77747217.png) Daily Reward - 12/9 x1  ·  ![Opti Shot Cue Piece](archive/images/2025-12-09/0e1f2491.png) Opti Shot Cue Piece x1 |
