@@ -45,3 +45,5 @@
 | 12/9/2025 | ![Daily Reward - 12/9](archive/images/2025-12-09/77747217.png) Daily Reward - 12/9 x1  ·  ![Opti Shot Cue Piece](archive/images/2025-12-09/0e1f2491.png) Opti Shot Cue Piece x1 |
 
 | 12/10/2025 | ![Daily Reward - 12/10](archive/images/2025-12-10/4fa7fb60.png) Daily Reward - 12/10 x1  ·  ![Trickster Cue Piece](archive/images/2025-12-10/eee6d28d.png) Trickster Cue Piece x1 |
+
+| 12/11/2025 | ![Daily Reward - 12/11](archive/images/2025-12-11/7f5e61ad.png) Daily Reward - 12/11 1  ·  ![Power Break Cue Piece](archive/images/2025-12-11/a2781179.png) Power Break Cue Piece x1 |
