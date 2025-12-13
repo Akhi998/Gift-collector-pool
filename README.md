@@ -49,3 +49,5 @@
 | 12/11/2025 | ![Daily Reward - 12/11](archive/images/2025-12-11/7f5e61ad.png) Daily Reward - 12/11 1  ·  ![Power Break Cue Piece](archive/images/2025-12-11/a2781179.png) Power Break Cue Piece x1 |
 
 | 12/12/2025 | ![Daily Reward - 12/12](archive/images/2025-12-12/9c85639c.png) Daily Reward - 12/12 x1  ·  ![Gamechanger Cue Piece](archive/images/2025-12-12/bfdbd72f.png) Gamechanger Cue Piece x2 |
+
+| 12/13/2025 | ![Daily Reward - 12/13](archive/images/2025-12-13/e400715b.png) Daily Reward - 12/13 500  ·  ![Strike Zone Cue Piece](archive/images/2025-12-13/7aa63a48.png) Strike Zone Cue Piece x1 |
