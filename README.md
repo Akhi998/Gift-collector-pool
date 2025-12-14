@@ -51,3 +51,5 @@
 | 12/12/2025 | ![Daily Reward - 12/12](archive/images/2025-12-12/9c85639c.png) Daily Reward - 12/12 x1  ·  ![Gamechanger Cue Piece](archive/images/2025-12-12/bfdbd72f.png) Gamechanger Cue Piece x2 |
 
 | 12/13/2025 | ![Daily Reward - 12/13](archive/images/2025-12-13/e400715b.png) Daily Reward - 12/13 500  ·  ![Strike Zone Cue Piece](archive/images/2025-12-13/7aa63a48.png) Strike Zone Cue Piece x1 |
+
+| 12/14/2025 | ![Daily Reward - 12/14](archive/images/2025-12-14/ca13cc8d.png) Daily Reward - 12/14 x1  ·  ![Opti Shot Cue Piece](archive/images/2025-12-14/0e1f2491.png) Opti Shot Cue Piece x1 |
