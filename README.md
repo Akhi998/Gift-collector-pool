@@ -57,3 +57,5 @@
 | 12/15/2025 | ![Daily Reward - 12/15](archive/images/2025-12-15/49459593.png) Daily Reward - 12/15 x1  ·  ![Spin Wizard Cue Piece](archive/images/2025-12-15/783156c8.png) Spin Wizard Cue Piece x1 |
 
 | 12/16/2025 | ![Daily Reward - 12/16](archive/images/2025-12-16/e400715b.png) Daily Reward - 12/16 500  ·  ![Strike Zone Cue Piece](archive/images/2025-12-16/7aa63a48.png) Strike Zone Cue Piece x1 |
+
+| 12/17/2025 | ![Bronze Random Collection Box](archive/images/2025-12-17/9c85639c.png) Bronze Random Collection Box x1  ·  ![Daily Reward - 12/17](archive/images/2025-12-17/7f5e61ad.png) Daily Reward - 12/17 1  ·  ![Trickster Cue Piece](archive/images/2025-12-17/eee6d28d.png) Trickster Cue Piece x1 |
