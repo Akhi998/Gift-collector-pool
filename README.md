@@ -65,3 +65,5 @@
 | 12/19/2025 | ![Bronze Random Collection Box](archive/images/2025-12-19/9c85639c.png) Bronze Random Collection Box x1  ·  ![Daily Reward - 12/19](archive/images/2025-12-19/4fa7fb60.png) Daily Reward - 12/19 x1  ·  ![Power Break Cue Piece](archive/images/2025-12-19/a2781179.png) Power Break Cue Piece x2 |
 
 | 12/20/2025 | ![Bronze Random Collection Box](archive/images/2025-12-20/9c85639c.png) Bronze Random Collection Box x1  ·  ![Daily Reward - 12/20](archive/images/2025-12-20/d2756c4e.png) Daily Reward - 12/20 x1  ·  ![Gamechanger Cue Piece](archive/images/2025-12-20/bfdbd72f.png) Gamechanger Cue Piece x1 |
+
+| 12/21/2025 | ![Bronze Random Collection Box](archive/images/2025-12-21/9c85639c.png) Bronze Random Collection Box x1  ·  ![Power Break Cue Piece](archive/images/2025-12-21/a2781179.png) Power Break Cue Piece x1 |
