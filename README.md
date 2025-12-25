@@ -73,3 +73,5 @@
 | 12/23/2025 | ![Bronze Random Collection Box](archive/images/2025-12-23/9c85639c.png) Bronze Random Collection Box x1  ·  ![Daily Reward - 12/23](archive/images/2025-12-23/cab4be19.png) Daily Reward - 12/23 x30  ·  ![Strike Zone Cue Piece](archive/images/2025-12-23/7aa63a48.png) Strike Zone Cue Piece x1 |
 
 | 12/24/2025 | ![Bronze Random Collection Box](archive/images/2025-12-24/9c85639c.png) Bronze Random Collection Box x1  ·  ![Daily Reward - 12/24](archive/images/2025-12-24/7f5e61ad.png) Daily Reward - 12/24 1  ·  ![Gamechanger Cue Piece](archive/images/2025-12-24/bfdbd72f.png) Gamechanger Cue Piece x1 |
+
+| 12/25/2025 | ![Bronze Random Collection Box](archive/images/2025-12-25/9c85639c.png) Bronze Random Collection Box x1  ·  ![Daily Reward - 12/25](archive/images/2025-12-25/77747217.png) Daily Reward - 12/25 x1  ·  ![Opti Shot Cue Piece](archive/images/2025-12-25/0e1f2491.png) Opti Shot Cue Piece x1 |
