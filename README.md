@@ -81,3 +81,5 @@
 | 12/27/2025 | ![Bronze Random Collection Box](archive/images/2025-12-27/9c85639c.png) Bronze Random Collection Box x1  ·  ![Daily Reward - 12/27](archive/images/2025-12-27/4a841b58.png) Daily Reward - 12/27 x1  ·  ![Legacy Strike Cue Piece](archive/images/2025-12-27/cad66ade.png) Legacy Strike Cue Piece x1 |
 
 | 12/28/2025 | ![Bronze Random Collection Box](archive/images/2025-12-28/9c85639c.png) Bronze Random Collection Box x1  ·  ![Daily Reward - 12/28](archive/images/2025-12-28/397c1cef.png) Daily Reward - 12/28 x1  ·  ![Spin Wizard Cue Piece](archive/images/2025-12-28/783156c8.png) Spin Wizard Cue Piece x1 |
+
+| 12/29/2025 | ![Bronze Random Collection Box](archive/images/2025-12-29/9c85639c.png) Bronze Random Collection Box x1  ·  ![Daily Reward - 12/29](archive/images/2025-12-29/472f1dfe.png) Daily Reward - 12/29 x1  ·  ![Legacy Strike Cue Piece](archive/images/2025-12-29/cad66ade.png) Legacy Strike Cue Piece x1 |
