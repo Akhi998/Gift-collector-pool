@@ -27,3 +27,5 @@
 | :---: | :---: |
 
 | 1/1/2026 | ![Bronze Random Collection Box](archive/images/2026-01-01/9c85639c.png) Bronze Random Collection Box x1  ·  ![Daily Reward - 1/1](archive/images/2026-01-01/7f5e61ad.png) Daily Reward - 1/1 1  ·  ![Strike Zone Cue Piece](archive/images/2026-01-01/7aa63a48.png) Strike Zone Cue Piece x1 |
+
+| 1/2/2026 | ![Bronze Random Collection Box](archive/images/2026-01-02/9c85639c.png) Bronze Random Collection Box x1  ·  ![Daily Reward - 1/2](archive/images/2026-01-02/4fa7fb60.png) Daily Reward - 1/2 x1  ·  ![Trickster Cue Piece](archive/images/2026-01-02/eee6d28d.png) Trickster Cue Piece x2 |
