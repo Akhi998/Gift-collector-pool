@@ -31,3 +31,5 @@
 | 1/2/2026 | ![Bronze Random Collection Box](archive/images/2026-01-02/9c85639c.png) Bronze Random Collection Box x1  ·  ![Daily Reward - 1/2](archive/images/2026-01-02/4fa7fb60.png) Daily Reward - 1/2 x1  ·  ![Trickster Cue Piece](archive/images/2026-01-02/eee6d28d.png) Trickster Cue Piece x2 |
 
 | 1/3/2026 | ![Bronze Random Collection Box](archive/images/2026-01-03/9c85639c.png) Bronze Random Collection Box x1  ·  ![Daily Reward - 1/3](archive/images/2026-01-03/d2756c4e.png) Daily Reward - 1/3 x1  ·  ![Gamechanger Cue Piece](archive/images/2026-01-03/bfdbd72f.png) Gamechanger Cue Piece x1 |
+
+| 1/4/2026 | ![Bronze Random Collection Box](archive/images/2026-01-04/9c85639c.png) Bronze Random Collection Box x1  ·  ![Daily Reward - 1/4](archive/images/2026-01-04/e400715b.png) Daily Reward - 1/4 500  ·  ![Legacy Strike Cue Piece](archive/images/2026-01-04/cad66ade.png) Legacy Strike Cue Piece x1 |
