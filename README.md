@@ -37,3 +37,5 @@
 | 1/5/2026 | ![Bronze Random Collection Box](archive/images/2026-01-05/9c85639c.png) Bronze Random Collection Box x1  ·  ![Daily Reward - 1/5](archive/images/2026-01-05/cab4be19.png) Daily Reward - 1/5 x30  ·  ![Strike Zone Cue Piece](archive/images/2026-01-05/7aa63a48.png) Strike Zone Cue Piece x1 |
 
 | 1/6/2026 | ![Bronze Random Collection Box](archive/images/2026-01-06/9c85639c.png) Bronze Random Collection Box x1  ·  ![Daily Reward - 1/6](archive/images/2026-01-06/ca13cc8d.png) Daily Reward - 1/6 x1  ·  ![Opti Shot Cue Piece](archive/images/2026-01-06/0e1f2491.png) Opti Shot Cue Piece x1 |
+
+| 1/7/2026 | ![Daily Reward - 1/7](archive/images/2026-01-07/4fa7fb60.png) Daily Reward - 1/7 x1  ·  ![Trickster Cue Piece](archive/images/2026-01-07/eee6d28d.png) Trickster Cue Piece x1 |
