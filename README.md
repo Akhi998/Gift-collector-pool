@@ -41,3 +41,5 @@
 | 1/7/2026 | ![Daily Reward - 1/7](archive/images/2026-01-07/4fa7fb60.png) Daily Reward - 1/7 x1  ·  ![Trickster Cue Piece](archive/images/2026-01-07/eee6d28d.png) Trickster Cue Piece x1 |
 
 | 1/8/2026 | ![Daily Reward - 1/8](archive/images/2026-01-08/7f5e61ad.png) Daily Reward - 1/8 1  ·  ![Gamechanger Cue Piece](archive/images/2026-01-08/bfdbd72f.png) Gamechanger Cue Piece x1 |
+
+| 1/9/2026 | ![Daily Reward - 1/9](archive/images/2026-01-09/9c85639c.png) Daily Reward - 1/9 x1  ·  ![Power Break Cue Piece](archive/images/2026-01-09/a2781179.png) Power Break Cue Piece x2 |
