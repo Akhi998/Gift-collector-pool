@@ -45,3 +45,5 @@
 | 1/9/2026 | ![Daily Reward - 1/9](archive/images/2026-01-09/9c85639c.png) Daily Reward - 1/9 x1  ·  ![Power Break Cue Piece](archive/images/2026-01-09/a2781179.png) Power Break Cue Piece x2 |
 
 | 1/10/2026 | ![Daily Reward - 1/10](archive/images/2026-01-10/e400715b.png) Daily Reward - 1/10 500  ·  ![Spin Wizard Cue Piece](archive/images/2026-01-10/783156c8.png) Spin Wizard Cue Piece x1 |
+
+| 1/11/2026 | ![Daily Reward - 1/11](archive/images/2026-01-11/d2756c4e.png) Daily Reward - 1/11 x1  ·  ![Trickster Cue Piece](archive/images/2026-01-11/eee6d28d.png) Trickster Cue Piece x1 |
