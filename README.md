@@ -49,3 +49,5 @@
 | 1/11/2026 | ![Daily Reward - 1/11](archive/images/2026-01-11/d2756c4e.png) Daily Reward - 1/11 x1  ·  ![Trickster Cue Piece](archive/images/2026-01-11/eee6d28d.png) Trickster Cue Piece x1 |
 
 | 1/12/2026 | ![Daily Reward - 1/12](archive/images/2026-01-12/e400715b.png) Daily Reward - 1/12 500  ·  ![Opti Shot Cue Piece](archive/images/2026-01-12/0e1f2491.png) Opti Shot Cue Piece x1 |
+
+| 1/13/2026 | ![Daily Reward - 1/13](archive/images/2026-01-13/49459593.png) Daily Reward - 1/13 x1  ·  ![Power Break Cue Piece](archive/images/2026-01-13/a2781179.png) Power Break Cue Piece x1 |
