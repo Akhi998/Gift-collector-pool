@@ -51,3 +51,5 @@
 | 1/12/2026 | ![Daily Reward - 1/12](archive/images/2026-01-12/e400715b.png) Daily Reward - 1/12 500  ·  ![Opti Shot Cue Piece](archive/images/2026-01-12/0e1f2491.png) Opti Shot Cue Piece x1 |
 
 | 1/13/2026 | ![Daily Reward - 1/13](archive/images/2026-01-13/49459593.png) Daily Reward - 1/13 x1  ·  ![Power Break Cue Piece](archive/images/2026-01-13/a2781179.png) Power Break Cue Piece x1 |
+
+| 1/14/2026 | ![Daily Reward - 1/14](archive/images/2026-01-14/e400715b.png) Daily Reward - 1/14 500  ·  ![Gamechanger Cue Piece](archive/images/2026-01-14/bfdbd72f.png) Gamechanger Cue Piece x1 |
