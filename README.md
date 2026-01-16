@@ -55,3 +55,5 @@
 | 1/14/2026 | ![Daily Reward - 1/14](archive/images/2026-01-14/e400715b.png) Daily Reward - 1/14 500  ·  ![Gamechanger Cue Piece](archive/images/2026-01-14/bfdbd72f.png) Gamechanger Cue Piece x1 |
 
 | 1/15/2026 | ![Daily Reward - 1/15](archive/images/2026-01-15/7f5e61ad.png) Daily Reward - 1/15 1  ·  ![Legacy Strike Cue Piece](archive/images/2026-01-15/cad66ade.png) Legacy Strike Cue Piece x1 |
+
+| 1/16/2026 | ![Daily Reward - 1/16](archive/images/2026-01-16/49459593.png) Daily Reward - 1/16 x1  ·  ![Spin Wizard Cue Piece](archive/images/2026-01-16/783156c8.png) Spin Wizard Cue Piece x2 |
