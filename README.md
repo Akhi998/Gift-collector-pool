@@ -63,3 +63,5 @@
 | 1/18/2026 | ![Daily Reward - 1/18](archive/images/2026-01-18/d2756c4e.png) Daily Reward - 1/18 x1  ·  ![Gamechanger Cue Piece](archive/images/2026-01-18/bfdbd72f.png) Gamechanger Cue Piece x1 |
 
 | 1/19/2026 | ![Daily Reward - 1/19](archive/images/2026-01-19/e400715b.png) Daily Reward - 1/19 500  ·  ![Power Break Cue Piece](archive/images/2026-01-19/a2781179.png) Power Break Cue Piece x1 |
+
+| 1/20/2026 | ![Daily Reward - 1/20](archive/images/2026-01-20/7f5e61ad.png) Daily Reward - 1/20 1  ·  ![Strike Zone Cue Piece](archive/images/2026-01-20/7aa63a48.png) Strike Zone Cue Piece x1 |
