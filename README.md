@@ -71,3 +71,5 @@
 | 1/22/2026 | ![Daily Reward - 1/22](archive/images/2026-01-22/7f5e61ad.png) Daily Reward - 1/22 1  ·  ![Trickster Cue Piece](archive/images/2026-01-22/eee6d28d.png) Trickster Cue Piece x1 |
 
 | 1/23/2026 | ![Daily Reward - 1/23](archive/images/2026-01-23/49459593.png) Daily Reward - 1/23 x1  ·  ![Legacy Strike Cue Piece](archive/images/2026-01-23/cad66ade.png) Legacy Strike Cue Piece x2 |
+
+| 1/24/2026 | ![Daily Reward - 1/24](archive/images/2026-01-24/7f5e61ad.png) Daily Reward - 1/24 1  ·  ![Spin Wizard Cue Piece](archive/images/2026-01-24/783156c8.png) Spin Wizard Cue Piece x1 |
