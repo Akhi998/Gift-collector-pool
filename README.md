@@ -79,3 +79,5 @@
 | 1/26/2026 | ![Daily Reward - 1/26](archive/images/2026-01-26/ca13cc8d.png) Daily Reward - 1/26 x1  ·  ![Strike Zone Cue Piece](archive/images/2026-01-26/7aa63a48.png) Strike Zone Cue Piece x1 |
 
 | 1/27/2026 | ![Daily Reward - 1/27](archive/images/2026-01-27/77747217.png) Daily Reward - 1/27 x1  ·  ![Spin Wizard Cue Piece](archive/images/2026-01-27/783156c8.png) Spin Wizard Cue Piece x1 |
+
+| 1/28/2026 | ![Daily Reward - 1/28](archive/images/2026-01-28/4fa7fb60.png) Daily Reward - 1/28 x1  ·  ![Opti Shot Cue Piece](archive/images/2026-01-28/0e1f2491.png) Opti Shot Cue Piece x1 |
