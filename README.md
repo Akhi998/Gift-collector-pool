@@ -27,3 +27,5 @@
 | :---: | :---: |
 
 | 2/1/2026 | ![Daily Reward - 2/1](archive/images/2026-02-01/d2756c4e.png) Daily Reward - 2/1 x1  ·  ![Strike Zone Cue Piece](archive/images/2026-02-01/7aa63a48.png) Strike Zone Cue Piece x1 |
+
+| 2/2/2026 | ![Daily Reward - 2/2](archive/images/2026-02-02/e400715b.png) Daily Reward - 2/2 500  ·  ![Legacy Strike Cue Piece](archive/images/2026-02-02/cad66ade.png) Legacy Strike Cue Piece x1 |
