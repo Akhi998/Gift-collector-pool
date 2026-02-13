@@ -71,7 +71,8 @@ export const collectRewards = async (userUniqueID) => {
     await goButton.click();
 
     // Wait after login
-    await page.waitForTimeout(4000);
+    await new Promise(resolve => setTimeout(resolve, 4000));
+
     await page.waitForSelector(".product-list-item", { timeout: TIMEOUT });
 
     logger("success", "✅ Logged in successfully");
