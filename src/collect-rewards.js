@@ -5,154 +5,129 @@ import { downloadImageToArchive } from "./image-downloader.js";
 
 export const collectRewards = async (userUniqueID) => {
   const pageUrl = "https://8ballpool.com/en/shop";
-  const delay = 50;
-  const TIMEOUT = 20000;
+  const delay = 100;
+  const TIMEOUT = 15000;
 
   logger("debug", "🚀 Launching browser...");
-
   const browser = await puppeteer.launch({
     headless: true,
     slowMo: delay,
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    // executablePath: "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
   });
 
   const page = await browser.newPage();
-
   await page.setUserAgent(
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36"
   );
 
-  try {
-    // ----------------------------------
-    // NAVIGATE
-    // ----------------------------------
-    logger("info", `🌐 Navigating to ${pageUrl}`);
-    await page.goto(pageUrl, { waitUntil: "networkidle2", timeout: 0 });
+  logger("info", `🌐 Navigating to ${pageUrl}`);
+  await page.goto(pageUrl, { waitUntil: "networkidle2", timeout: 0 });
 
-    // ----------------------------------
-    // LOGIN
-    // ----------------------------------
-    logger("info", "Waiting for login button...");
-    await page.waitForSelector("button.m-button", { visible: true, timeout: TIMEOUT });
+  logger("info", "✅ Navigation complete, waiting for login button.");
+  const loginButton = await page.waitForSelector("button.m-button", { visible: true, timeout: TIMEOUT });
+  if (!loginButton) throw new Error("Login button not found to open modal.");
+  
+  logger("debug", "🔍 Login button found, clicking.");
+  await loginButton.click();
 
-    const buttons = await page.$$("button.m-button");
-    let loginButton = null;
+  logger("info", "⌨️ Waiting for and typing User ID...");
+  await page.waitForSelector("input.user-id-input", { visible: true, timeout: TIMEOUT });
+  await page.type("input.user-id-input", userUniqueID, { delay });
 
-    for (const btn of buttons) {
-      const text = await page.evaluate(el => el.innerText.trim().toLowerCase(), btn);
-      if (text.includes("login")) {
-        loginButton = btn;
-        break;
-      }
-    }
+  // allow UI to react
+  logger("info", "➡ Looking for the correct 'Go' button among buttons.m-button...");
 
-    if (!loginButton) throw new Error("Login button not found");
+  // Gather all candidate buttons (class is shared)
+  const buttons = await page.$$("button.m-button");
+  let goButton = null;
 
-    await loginButton.click();
+  for (const btn of buttons) {
+    // get visible inner text (trim)
+    const text = (await page.evaluate(el => (el.innerText || el.textContent || "").trim(), btn)).toLowerCase();
 
-    logger("info", "Typing User ID...");
-    await page.waitForSelector("input.user-id-input", { visible: true, timeout: TIMEOUT });
-    await page.type("input.user-id-input", userUniqueID, { delay });
+    // match exact 'go' or contains 'go' as a word (covers icons + text)
+    if (text === "go" || /\bgo\b/.test(text)) {
+      // ensure it's visible and enabled
+      const visible = await page.evaluate(el => {
+        const style = window.getComputedStyle(el);
+        return style && style.display !== "none" && style.visibility !== "hidden" && !el.disabled;
+      }, btn);
 
-    // Click GO
-    const goButtons = await page.$$("button.m-button");
-    let goButton = null;
-
-    for (const btn of goButtons) {
-      const text = await page.evaluate(el => el.innerText.trim().toLowerCase(), btn);
-      if (text === "go") {
+      if (visible) {
         goButton = btn;
         break;
       }
     }
+  }
 
-    if (!goButton) throw new Error("Go button not found");
+  // final fallback: try any input-specific go button if available
+ 
 
-    await goButton.click();
+  await goButton.click();
+  logger("success", "✅ Clicked Go (login attempted).");
 
-    // Wait after login
-    await new Promise(resolve => setTimeout(resolve, 4000));
+  // ----------------------------
+  // COLLECT FREE REWARDS
+  // ----------------------------
+  logger("info", "🛒 Scanning products...");
 
-    await page.waitForSelector(".product-list-item", { timeout: TIMEOUT });
+  await page.waitForSelector(".product-list-item", { timeout: 20000 });
+  const products = await page.$$(".product-list-item");
+  const N = products.length;
 
-    logger("success", "✅ Logged in successfully");
+  logger("info", `💡 ${N} products found.`);
 
-    // ----------------------------------
-    // COLLECT ONLY FREE REWARDS
-    // ----------------------------------
-    const rewards = [];
+  const rewards = [];
+
+  for (const [index, product] of products.entries()) {
+    const priceButton = await product.$("button");
+    if (!priceButton) continue;
+
+    const price = (await priceButton.evaluate((el) => (el.textContent || "").trim())).toUpperCase();
+    const imageSrc = await product.evaluate((prod) => {
+      const imgs = Array.from(prod.querySelectorAll("img"));
+      if (!imgs.length) return null;
     
-    logger("info", "🛒 Searching for FREE rewards...");
+      let best = imgs[0];
+      let bestArea = 0;
     
-    while (true) {
+      for (const img of imgs) {
+        const rect = img.getBoundingClientRect();
+        const area = (rect.width || 0) * (rect.height || 0);
     
-      await page.waitForSelector(".product-list-item", { timeout: 15000 });
-    
-      // Find a FREE button directly in DOM
-      const freeButton = await page.evaluateHandle(() => {
-        const products = document.querySelectorAll(".product-list-item");
-    
-        for (const prod of products) {
-          const btn = prod.querySelector("button");
-          if (!btn) continue;
-    
-          const price = btn.innerText.trim().toUpperCase();
-          if (price === "FREE") {
-            return btn;
-          }
+        if (area > bestArea) {
+          bestArea = area;
+          best = img;
         }
-    
-        return null;
-      });
-    
-      const buttonElement = freeButton.asElement();
-    
-      if (!buttonElement) {
-        logger("info", "No FREE rewards found.");
-        break;
       }
     
-      // Extract reward info BEFORE clicking
-      const rewardData = await page.evaluate(() => {
-        const products = document.querySelectorAll(".product-list-item");
+      return best ? best.src : imgs[0].src;
+    });
     
-        for (const prod of products) {
-          const btn = prod.querySelector("button");
-          if (!btn) continue;
-    
-          if (btn.innerText.trim().toUpperCase() === "FREE") {
-            const name =
-              prod.querySelector("h3")?.innerText?.trim() || "Unknown";
-    
-            const qty =
-              prod.querySelector(".amount-text")?.innerText?.trim() || "";
-    
-            const img = prod.querySelector("img")?.src || null;
-    
-            return { name, qty, img };
-          }
-        }
-    
-        return null;
-      });
-    
-      if (!rewardData) break;
-    
-      logger("info", `🎁 Claiming: ${rewardData.name}`);
-    
-      await buttonElement.click();
-    
-      // small wait using native JS
-      await new Promise(r => setTimeout(r, 4000));
-    
-      const localPath = rewardData.img
-        ? await downloadImageToArchive(rewardData.img)
-        : null;
-    
-      rewards.push(
-        makeRewardData(localPath || rewardData.img, rewardData.name, rewardData.qty)
-      );
-    
-      logger("success", `🎉 Claimed: ${rewardData.name}`);
-    }
+    const nameElement = await product.$("h3");
+    const name = nameElement ? await nameElement.evaluate((el) => el.textContent.trim()) : "Unknown";
+    const qtyElem = await product.$(".amount-text");
+    const quantity = qtyElem ? await qtyElem.evaluate(el => el.textContent.trim()) : "";
 
+    logger("info", `🚲 [${index + 1}/${N}] ${price} ${name}`);
+
+    if (price === "FREE" || price === "CLAIMED") {
+      logger("info", `⏳ Claiming: [${index + 1}/${N}]`);
+      await priceButton.click();
+      const localPath = imageSrc ? await downloadImageToArchive(imageSrc) : null;
+      const imageRef = localPath ? localPath : imageSrc; // fallback to remote URL if needed
+
+      rewards.push(makeRewardData(imageRef, name, quantity));
+      //rewards.push(makeRewardData(imageSrc, name, quantity));
+      logger("success", `🎉 Claimed: [${index + 1}/${N}]`);
+    }
+  }
+
+  // (optional) await browser.close();
+  logger("info", "❎ Browser closed.");
+
+  if (rewards.length === 0) throw new Error("No rewards found");
+
+  return rewards;
+};
