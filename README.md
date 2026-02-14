@@ -43,3 +43,5 @@
 | 2/13/2026 | ![Daily Reward - 2/13](archive/images/2026-02-13/49459593.png) Daily Reward - 2/13 x1  ·  ![Power Break Cue Piece](archive/images/2026-02-13/a2781179.png) Power Break Cue Piece x2 |
 
 | 2/14/2026 | ![Daily Reward - 2/14](archive/images/2026-02-14/7f5e61ad.png) Daily Reward - 2/14 1  ·  ![Strike Zone Cue Piece](archive/images/2026-02-14/7aa63a48.png) Strike Zone Cue Piece x1 |
+
+| 2/14/2026 | ![Daily Reward - 2/14](archive/images/2026-02-14/7f5e61ad.png) Daily Reward - 2/14 1  ·  ![Strike Zone Cue Piece](archive/images/2026-02-14/7aa63a48.png) Strike Zone Cue Piece x1 |
