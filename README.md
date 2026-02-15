@@ -51,3 +51,5 @@
 | 2/14/2026 | ![Daily Reward - 2/14](archive/images/2026-02-14/7f5e61ad.png) Daily Reward - 2/14 1  ·  ![Strike Zone Cue Piece](archive/images/2026-02-14/7aa63a48.png) Strike Zone Cue Piece x1 |
 
 | 2/15/2026 | ![Daily Reward - 2/14](archive/images/2026-02-15/7f5e61ad.png) Daily Reward - 2/14 1  ·  ![Strike Zone Cue Piece](archive/images/2026-02-15/7aa63a48.png) Strike Zone Cue Piece x1 |
+
+| 2/15/2026 | ![Daily Reward - 2/14](archive/images/2026-02-15/7f5e61ad.png) Daily Reward - 2/14 1  ·  ![Strike Zone Cue Piece](archive/images/2026-02-15/7aa63a48.png) Strike Zone Cue Piece x1 |
