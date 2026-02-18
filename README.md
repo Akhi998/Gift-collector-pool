@@ -93,3 +93,5 @@
 | 2/17/2026 | ![Daily Reward - 2/17](archive/images/2026-02-17/77747217.png) Daily Reward - 2/17 x1  ·  ![Trickster Cue Piece](archive/images/2026-02-17/eee6d28d.png) Trickster Cue Piece x1 |
 
 | 2/17/2026 | ![Daily Reward - 2/17](archive/images/2026-02-17/77747217.png) Daily Reward - 2/17 x1  ·  ![Trickster Cue Piece](archive/images/2026-02-17/eee6d28d.png) Trickster Cue Piece x1 |
+
+| 2/18/2026 | ![Daily Reward - 2/17](archive/images/2026-02-18/77747217.png) Daily Reward - 2/17 x1  ·  ![Trickster Cue Piece](archive/images/2026-02-18/eee6d28d.png) Trickster Cue Piece x1 |
