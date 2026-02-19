@@ -97,3 +97,5 @@
 | 2/18/2026 | ![Daily Reward - 2/17](archive/images/2026-02-18/77747217.png) Daily Reward - 2/17 x1  ·  ![Trickster Cue Piece](archive/images/2026-02-18/eee6d28d.png) Trickster Cue Piece x1 |
 
 | 2/18/2026 | ![Daily Reward - 2/17](archive/images/2026-02-18/77747217.png) Daily Reward - 2/17 x1  ·  ![Trickster Cue Piece](archive/images/2026-02-18/eee6d28d.png) Trickster Cue Piece x1 |
+
+| 2/19/2026 | ![Daily Reward - 2/18](archive/images/2026-02-19/4fa7fb60.png) Daily Reward - 2/18 x1  ·  ![Opti Shot Cue Piece](archive/images/2026-02-19/0e1f2491.png) Opti Shot Cue Piece x1 |
