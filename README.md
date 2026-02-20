@@ -113,3 +113,5 @@
 | 2/20/2026 | ![Daily Reward - 2/20](archive/images/2026-02-20/9c85639c.png) Daily Reward - 2/20 x1  ·  ![Spin Wizard Cue Piece](archive/images/2026-02-20/783156c8.png) Spin Wizard Cue Piece x2 |
 
 | 2/20/2026 | ![Daily Reward - 2/20](archive/images/2026-02-20/9c85639c.png) Daily Reward - 2/20 x1  ·  ![Spin Wizard Cue Piece](archive/images/2026-02-20/783156c8.png) Spin Wizard Cue Piece x2 |
+
+| 2/20/2026 | ![Daily Reward - 2/20](archive/images/2026-02-20/9c85639c.png) Daily Reward - 2/20 x1  ·  ![Spin Wizard Cue Piece](archive/images/2026-02-20/783156c8.png) Spin Wizard Cue Piece x2 |
