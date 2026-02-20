@@ -109,3 +109,5 @@
 | 2/20/2026 | ![Daily Reward - 2/19](archive/images/2026-02-20/7f5e61ad.png) Daily Reward - 2/19 1  ·  ![Power Break Cue Piece](archive/images/2026-02-20/a2781179.png) Power Break Cue Piece x1 |
 
 | 2/20/2026 | ![Daily Reward - 2/19](archive/images/2026-02-20/7f5e61ad.png) Daily Reward - 2/19 1  ·  ![Power Break Cue Piece](archive/images/2026-02-20/a2781179.png) Power Break Cue Piece x1 |
+
+| 2/20/2026 | ![Daily Reward - 2/20](archive/images/2026-02-20/9c85639c.png) Daily Reward - 2/20 x1  ·  ![Spin Wizard Cue Piece](archive/images/2026-02-20/783156c8.png) Spin Wizard Cue Piece x2 |
