@@ -127,3 +127,5 @@
 | 2/22/2026 | ![Daily Reward - 2/21](archive/images/2026-02-22/e400715b.png) Daily Reward - 2/21 500  ·  ![Legacy Strike Cue Piece](archive/images/2026-02-22/cad66ade.png) Legacy Strike Cue Piece x1 |
 
 | 2/22/2026 | ![Daily Reward - 2/21](archive/images/2026-02-22/e400715b.png) Daily Reward - 2/21 500  ·  ![Legacy Strike Cue Piece](archive/images/2026-02-22/cad66ade.png) Legacy Strike Cue Piece x1 |
+
+| 2/22/2026 | ![Daily Reward - 2/21](archive/images/2026-02-22/e400715b.png) Daily Reward - 2/21 500  ·  ![Legacy Strike Cue Piece](archive/images/2026-02-22/cad66ade.png) Legacy Strike Cue Piece x1 |
