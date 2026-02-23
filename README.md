@@ -133,3 +133,5 @@
 | 2/22/2026 | ![Daily Reward - 2/22](archive/images/2026-02-22/d2756c4e.png) Daily Reward - 2/22 x1  ·  ![Gamechanger Cue Piece](archive/images/2026-02-22/bfdbd72f.png) Gamechanger Cue Piece x1 |
 
 | 2/22/2026 | ![Daily Reward - 2/22](archive/images/2026-02-22/d2756c4e.png) Daily Reward - 2/22 x1  ·  ![Gamechanger Cue Piece](archive/images/2026-02-22/bfdbd72f.png) Gamechanger Cue Piece x1 |
+
+| 2/23/2026 | ![Daily Reward - 2/23](archive/images/2026-02-23/e400715b.png) Daily Reward - 2/23 500  ·  ![Legacy Strike Cue Piece](archive/images/2026-02-23/cad66ade.png) Legacy Strike Cue Piece x1 |
