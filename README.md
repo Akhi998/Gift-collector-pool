@@ -145,3 +145,5 @@
 | 2/25/2026 | ![Daily Reward - 2/24](archive/images/2026-02-25/49459593.png) Daily Reward - 2/24 x1  ·  ![Opti Shot Cue Piece](archive/images/2026-02-25/0e1f2491.png) Opti Shot Cue Piece x1 |
 
 | 2/25/2026 | ![Daily Reward - 2/25](archive/images/2026-02-25/e400715b.png) Daily Reward - 2/25 500  ·  ![Strike Zone Cue Piece](archive/images/2026-02-25/7aa63a48.png) Strike Zone Cue Piece x1 |
+
+| 2/25/2026 | ![Daily Reward - 2/25](archive/images/2026-02-25/e400715b.png) Daily Reward - 2/25 500  ·  ![Strike Zone Cue Piece](archive/images/2026-02-25/7aa63a48.png) Strike Zone Cue Piece x1 |
