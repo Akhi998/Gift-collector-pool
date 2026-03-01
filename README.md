@@ -26,4 +26,4 @@
 | Date | Rewards |
 | :---: | :---: |
 
-| 3/1/2026 | ![Daily Reward - 2/28](archive/images/2026-03-01/4fa7fb60.png) Daily Reward - 2/28 x1  ·  ![Spin Wizard Cue Piece](archive/images/2026-03-01/783156c8.png) Spin Wizard Cue Piece x1 |
+| 3/1/2026 | ![Daily Reward - 3/1](archive/images/2026-03-01/d2756c4e.png) Daily Reward - 3/1 x1  ·  ![Opti Shot Cue Piece](archive/images/2026-03-01/0e1f2491.png) Opti Shot Cue Piece x1 |
