@@ -27,3 +27,5 @@
 | :---: | :---: |
 
 | 3/1/2026 | ![Daily Reward - 3/1](archive/images/2026-03-01/d2756c4e.png) Daily Reward - 3/1 x1  ·  ![Opti Shot Cue Piece](archive/images/2026-03-01/0e1f2491.png) Opti Shot Cue Piece x1 |
+
+| 3/2/2026 | ![Daily Reward - 3/1](archive/images/2026-03-02/d2756c4e.png) Daily Reward - 3/1 x1  ·  ![Opti Shot Cue Piece](archive/images/2026-03-02/0e1f2491.png) Opti Shot Cue Piece x1 |
