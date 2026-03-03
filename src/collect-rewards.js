@@ -161,7 +161,7 @@ export const collectRewards = async (userUniqueID) => {
       logger("success", `🎉 FREE reward claimed: ${name}`);
       break;
   
-    }
+
     if (!foundFree) {
       logger("info", "✅ No more FREE rewards found.");
       break;
