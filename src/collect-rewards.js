@@ -61,8 +61,14 @@ export const collectRewards = async (userUniqueID) => {
 
   if (!goButton) throw new Error("Go button not found");
   await goButton.click();
-
   logger("success", "✅ Clicked Go (login attempted).");
+  
+  // 🔥 WAIT FOR LOGIN TO COMPLETE
+  await page.waitForFunction(() => {
+    return document.body.innerText.includes("FREE");
+  }, { timeout: 20000 }).catch(() => {});
+  
+  logger("info", "✅ Login completed / shop updated.");
 
   // ----------------------------
   // WAIT FOR SHOP PRODUCTS
