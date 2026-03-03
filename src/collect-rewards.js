@@ -24,8 +24,7 @@ export const collectRewards = async (userUniqueID) => {
   logger("info", `🌐 Navigating to ${pageUrl}`);
   await page.goto(pageUrl, { waitUntil: "networkidle2", timeout: 0 });
 
-  logger("info", "✅ Navigation complete, waiting for login button.");
-
+  logger("info", "✅ Waiting for login button...");
   const loginButton = await page.waitForSelector("button.m-button", {
     visible: true,
     timeout: TIMEOUT,
@@ -33,7 +32,7 @@ export const collectRewards = async (userUniqueID) => {
 
   await loginButton.click();
 
-  logger("info", "⌨️ Waiting for and typing User ID...");
+  logger("info", "⌨️ Typing User ID...");
   await page.waitForSelector("input.user-id-input", {
     visible: true,
     timeout: TIMEOUT,
@@ -41,16 +40,13 @@ export const collectRewards = async (userUniqueID) => {
 
   await page.type("input.user-id-input", userUniqueID, { delay });
 
-  // Click GO button safely
+  // Find GO button
   const buttons = await page.$$("button.m-button");
   let goButton = null;
 
   for (const btn of buttons) {
     const text = (
-      await page.evaluate(
-        (el) => (el.innerText || el.textContent || "").trim(),
-        btn
-      )
+      await btn.evaluate(el => (el.innerText || el.textContent || "").trim())
     ).toLowerCase();
 
     if (text === "go" || /\bgo\b/.test(text)) {
@@ -60,112 +56,106 @@ export const collectRewards = async (userUniqueID) => {
   }
 
   if (!goButton) throw new Error("Go button not found");
-  await goButton.click();
-  logger("success", "✅ Clicked Go (login attempted).");
-  
-  // 🔥 WAIT FOR LOGIN TO COMPLETE
-  await page.waitForFunction(() => {
-    return document.body.innerText.includes("FREE");
-  }, { timeout: 20000 }).catch(() => {});
-  
-  logger("info", "✅ Login completed / shop updated.");
 
-  // ----------------------------
-  // WAIT FOR SHOP PRODUCTS
-  // ----------------------------
-  logger("info", "🛒 Waiting for products...");
+  await goButton.click();
+  logger("success", "✅ Clicked Go");
+
+  // Wait for shop to load
   await page.waitForSelector(".product-list-item", { timeout: 20000 });
 
   const rewards = [];
 
-  logger("info", "🔎 Scanning and claiming FREE rewards safely...");
+  logger("info", "🔎 Scanning and claiming FREE rewards...");
 
-  // --------------------------------------------
-  // SAFE LOOP (NO STALE ELEMENTS)
-  // --------------------------------------------
   while (true) {
-  
+
+    let foundFree = false;
+
     const freeButtonHandle = await page.evaluateHandle(() => {
-      const buttons = Array.from(document.querySelectorAll(".product-list-item button"));
+      const buttons = Array.from(
+        document.querySelectorAll(".product-list-item button")
+      );
+
       return buttons.find(btn =>
         btn.innerText &&
         btn.innerText.toUpperCase().includes("FREE")
       ) || null;
     });
-  
+
     const freeButton = freeButtonHandle.asElement();
-  
+
     if (!freeButton) {
       logger("info", "✅ No more FREE rewards found.");
       break;
     }
-  
-    logger("info", "⏳ Claiming FREE reward...");
-  
+
+    foundFree = true;
+
     try {
-  
-      // 🔥 Extract product card BEFORE clicking
+
+      logger("info", "⏳ Claiming FREE reward...");
+
+      // Get parent product card
       const productHandle = await freeButton.evaluateHandle(btn =>
         btn.closest(".product-list-item")
       );
-  
+
       const product = productHandle.asElement();
-  
+
       let name = "Unknown";
       let quantity = "";
       let imageSrc = "";
-  
+
       if (product) {
-  
         name = await product.$eval("h3", el => el.textContent.trim())
           .catch(() => "Unknown");
-  
+
         quantity = await product.$eval(".amount-text", el => el.textContent.trim())
           .catch(() => "");
-  
-        // Pick largest image (avoid ℹ️ icon)
+
         imageSrc = await product.evaluate(prod => {
           const imgs = Array.from(prod.querySelectorAll("img"));
           if (!imgs.length) return "";
-  
+
           let best = imgs[0];
           let bestArea = 0;
-  
+
           for (const img of imgs) {
             const rect = img.getBoundingClientRect();
             const area = rect.width * rect.height;
-  
+
             if (area > bestArea) {
               bestArea = area;
               best = img;
             }
           }
-  
+
           return best.src;
         });
       }
-  
-      logger("info", `📦 Reward Found: ${name}`);
-  
-      // Optional: archive image
-      const localPath = imageSrc ? await downloadImageToArchive(imageSrc) : "";
-      const imageRef = localPath || imageSrc;
-  
-      rewards.push(makeRewardData(imageRef, name, quantity));
-  
-      // 🔥 Now click
-      await freeButton.click();
-  
-      await new Promise(resolve => setTimeout(resolve, 1500));
-  
-      logger("success", `🎉 FREE reward claimed: ${name}`);
-      break;
-  
 
-    if (!foundFree) {
-      logger("info", "✅ No more FREE rewards found.");
-      break;
+      logger("info", `📦 Reward Found: ${name}`);
+
+      const localPath = imageSrc
+        ? await downloadImageToArchive(imageSrc)
+        : "";
+
+      const imageRef = localPath || imageSrc;
+
+      rewards.push(makeRewardData(imageRef, name, quantity));
+
+      // Click reward
+      await freeButton.click();
+      await new Promise(resolve => setTimeout(resolve, 1500));
+
+      logger("success", `🎉 FREE reward claimed: ${name}`);
+
+    } catch (err) {
+      logger("warn", "⚠ Click failed, retrying...");
+      await new Promise(resolve => setTimeout(resolve, 1000));
     }
+
+    if (!foundFree) break;
   }
 
   logger("info", "❎ Closing browser...");
