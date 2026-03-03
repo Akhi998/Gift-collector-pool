@@ -6,12 +6,14 @@
  *
  */
 export const makeRewardData = (imageSrcOrLocalPath, name, quantity) => {
-  // If imageSrcOrLocalPath is a remote URL, prefer a local saved path (downloaded)
   const src = imageSrcOrLocalPath || "";
-  // Use Markdown image syntax so GitHub renders correctly in tables too
-  // If src is empty we show only the name and qty
-  const imgMd = src ? `![${escapeAlt(name)}](${src})` : "";
-  return `${imgMd} ${escapeHtml(name)} ${escapeHtml(quantity)}`;
+
+  // Use HTML image instead of Markdown to control size
+  const imgHtml = src
+    ? `<img src="${src}" width="90" style="vertical-align:middle; margin-right:6px;" />`
+    : "";
+
+  return `${imgHtml}${escapeHtml(name)} ${escapeHtml(quantity)}`;
 };
 
 function escapeHtml(s = "") {
