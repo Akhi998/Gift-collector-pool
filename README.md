@@ -14,7 +14,3 @@
 
 | Date | Rewards |
 | :---: | :---: |
-
-| 3/3/2026 | <img src="archive/images/2026-03-03/5ca2e3e7.data" width="90" style="vertical-align:middle; margin-right:6px;" />Daily Reward - 3/2 500  ·  <img src="archive/images/2026-03-03/5ca2e3e7.data" width="90" style="vertical-align:middle; margin-right:6px;" />Legacy Strike Cue Piece x1 |
-
-| 3/3/2026 |  |
