@@ -78,32 +78,31 @@ export const collectRewards = async (userUniqueID) => {
   // SAFE LOOP (NO STALE ELEMENTS)
   // --------------------------------------------
   while (true) {
-    // Find a FREE button dynamically each time
-    const freeButton = await page.$x(
-      "//button[contains(translate(text(),'free','FREE'),'FREE')]"
-    );
-
-    if (!freeButton.length) {
+  
+    const freeButtonHandle = await page.evaluateHandle(() => {
+      const buttons = Array.from(document.querySelectorAll("button"));
+      return buttons.find(btn =>
+        btn.innerText &&
+        btn.innerText.toUpperCase().includes("FREE")
+      ) || null;
+    });
+  
+    const freeButton = freeButtonHandle.asElement();
+  
+    if (!freeButton) {
       logger("info", "✅ No more FREE rewards found.");
       break;
     }
-
+  
     logger("info", "⏳ Claiming FREE reward...");
-
+  
     try {
-      await freeButton[0].click();
-      await page.waitForTimeout(1500); // wait for DOM refresh
-
-      // Optional: close popup if exists
-      const closeBtn = await page.$(".modal-close-button");
-      if (closeBtn) {
-        await closeBtn.click();
-        await page.waitForTimeout(500);
-      }
-
+      await freeButton.click();
+      await page.waitForTimeout(1500);
+  
       logger("success", "🎉 FREE reward claimed!");
     } catch (err) {
-      logger("warn", "⚠ Failed to click FREE button, retrying...");
+      logger("warn", "⚠ Click failed, retrying...");
       await page.waitForTimeout(1000);
     }
   }
