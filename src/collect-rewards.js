@@ -98,7 +98,25 @@ export const collectRewards = async (userUniqueID) => {
         // 🔽 Extract reward data BEFORE clicking
         const name = await product.$eval("h3", el => el.textContent.trim()).catch(() => "Unknown");
   
-        const imageSrc = await product.$eval("img", el => el.src).catch(() => "");
+        const imageSrc = await product.evaluate(prod => {
+          const imgs = Array.from(prod.querySelectorAll("img"));
+          if (!imgs.length) return "";
+        
+          let best = imgs[0];
+          let bestArea = 0;
+        
+          for (const img of imgs) {
+            const rect = img.getBoundingClientRect();
+            const area = rect.width * rect.height;
+        
+            if (area > bestArea) {
+              bestArea = area;
+              best = img;
+            }
+          }
+        
+          return best.src;
+        });
   
         const quantity = await product.$eval(".amount-text", el => el.textContent.trim())
           .catch(() => "");
