@@ -16,3 +16,5 @@
 | :---: | :---: |
 
 | 3/3/2026 | <img src="archive/images/2026-03-03/7f5e61ad.png" width="90" style="vertical-align:middle; margin-right:6px;" />Daily Reward - 3/3 1  ·  <img src="archive/images/2026-03-03/a2781179.png" width="90" style="vertical-align:middle; margin-right:6px;" />Power Break Cue Piece x1 |
+
+| 3/3/2026 | <img src="archive/images/2026-03-03/7f5e61ad.png" width="90" style="vertical-align:middle; margin-right:6px;" />Daily Reward - 3/3 1 |
