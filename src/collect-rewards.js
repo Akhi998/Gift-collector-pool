@@ -80,7 +80,7 @@ export const collectRewards = async (userUniqueID) => {
   while (true) {
   
     const freeButtonHandle = await page.evaluateHandle(() => {
-      const buttons = Array.from(document.querySelectorAll("button"));
+      const buttons = Array.from(document.querySelectorAll(".product-list-item button"));
       return buttons.find(btn =>
         btn.innerText &&
         btn.innerText.toUpperCase().includes("FREE")
@@ -98,12 +98,14 @@ export const collectRewards = async (userUniqueID) => {
   
     try {
       await freeButton.click();
-      await page.waitForTimeout(1500);
+  
+      // wait safely (modern puppeteer compatible)
+      await new Promise(resolve => setTimeout(resolve, 1500));
   
       logger("success", "🎉 FREE reward claimed!");
     } catch (err) {
       logger("warn", "⚠ Click failed, retrying...");
-      await page.waitForTimeout(1000);
+      await new Promise(resolve => setTimeout(resolve, 1000));
     }
   }
 
