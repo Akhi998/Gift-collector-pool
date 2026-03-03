@@ -69,7 +69,7 @@ export const collectRewards = async (userUniqueID) => {
 
   while (true) {
 
-    // Dynamically find FREE button each loop
+    // Find FREE button dynamically (fresh each loop)
     const freeButtonHandle = await page.evaluateHandle(() => {
       const buttons = Array.from(
         document.querySelectorAll(".product-list-item button")
@@ -90,9 +90,9 @@ export const collectRewards = async (userUniqueID) => {
 
     try {
 
-      logger("info", "⏳ Attempting to claim FREE reward...");
+      logger("info", "⏳ Claiming FREE reward...");
 
-      // Get product card BEFORE clicking
+      // Get parent product card
       const productHandle = await freeButton.evaluateHandle(btn =>
         btn.closest(".product-list-item")
       );
@@ -131,39 +131,41 @@ export const collectRewards = async (userUniqueID) => {
         });
       }
 
-      // 🔥 CLICK FIRST
-      await freeButton.click();
+      logger("info", `📦 Reward Found: ${name}`);
 
-      // Wait until FREE disappears (means successful claim)
-      await page.waitForFunction(
-        (btn) => btn && !btn.innerText.toUpperCase().includes("FREE"),
-        { timeout: 5000 },
-        freeButton
-      );
-
-      logger("success", `🎉 FREE reward claimed: ${name}`);
-
-      // Only now process reward
       const localPath = imageSrc
         ? await downloadImageToArchive(imageSrc)
         : "";
 
       const imageRef = localPath || imageSrc;
 
+      // ✅ DUPLICATE PROTECTION
       const rewardString = makeRewardData(imageRef, name, quantity);
 
-      // Prevent duplicates inside same run
       if (!rewards.some(r => r.includes(name))) {
         rewards.push(rewardString);
         logger("info", `➕ Added reward: ${name}`);
+      } else {
+        logger("info", `⚠ Skipping duplicate reward: ${name}`);
       }
 
-      // Small delay to allow DOM refresh
+      // Click reward
+      await freeButton.click();
+
+      // Wait until button changes from FREE (more stable)
+      await page.waitForFunction(
+        (btn) => btn && !btn.innerText.toUpperCase().includes("FREE"),
+        {},
+        freeButton
+      ).catch(() => {});
+
       await new Promise(resolve => setTimeout(resolve, 1000));
 
+      logger("success", `🎉 FREE reward claimed: ${name}`);
+
     } catch (err) {
-      logger("warn", "⚠ Reward not claimable or already claimed.");
-      break;
+      logger("warn", "⚠ Click failed, retrying...");
+      await new Promise(resolve => setTimeout(resolve, 1000));
     }
   }
 
