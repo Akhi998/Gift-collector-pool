@@ -40,7 +40,7 @@ export const collectRewards = async (userUniqueID) => {
 
   await page.type("input.user-id-input", userUniqueID, { delay });
 
-  // Find GO button
+  // Find GO button safely
   const buttons = await page.$$("button.m-button");
   let goButton = null;
 
@@ -69,8 +69,7 @@ export const collectRewards = async (userUniqueID) => {
 
   while (true) {
 
-    let foundFree = false;
-
+    // Find FREE button dynamically (fresh each loop)
     const freeButtonHandle = await page.evaluateHandle(() => {
       const buttons = Array.from(
         document.querySelectorAll(".product-list-item button")
@@ -88,8 +87,6 @@ export const collectRewards = async (userUniqueID) => {
       logger("info", "✅ No more FREE rewards found.");
       break;
     }
-
-    foundFree = true;
 
     try {
 
@@ -142,11 +139,27 @@ export const collectRewards = async (userUniqueID) => {
 
       const imageRef = localPath || imageSrc;
 
-      rewards.push(makeRewardData(imageRef, name, quantity));
+      // ✅ DUPLICATE PROTECTION
+      const rewardString = makeRewardData(imageRef, name, quantity);
+
+      if (!rewards.some(r => r.includes(name))) {
+        rewards.push(rewardString);
+        logger("info", `➕ Added reward: ${name}`);
+      } else {
+        logger("info", `⚠ Skipping duplicate reward: ${name}`);
+      }
 
       // Click reward
       await freeButton.click();
-      await new Promise(resolve => setTimeout(resolve, 1500));
+
+      // Wait until button changes from FREE (more stable)
+      await page.waitForFunction(
+        (btn) => btn && !btn.innerText.toUpperCase().includes("FREE"),
+        {},
+        freeButton
+      ).catch(() => {});
+
+      await new Promise(resolve => setTimeout(resolve, 1000));
 
       logger("success", `🎉 FREE reward claimed: ${name}`);
 
@@ -154,8 +167,6 @@ export const collectRewards = async (userUniqueID) => {
       logger("warn", "⚠ Click failed, retrying...");
       await new Promise(resolve => setTimeout(resolve, 1000));
     }
-
-    if (!foundFree) break;
   }
 
   logger("info", "❎ Closing browser...");
