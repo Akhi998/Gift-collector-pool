@@ -15,8 +15,3 @@
 | Date | Rewards |
 | :---: | :---: |
 
-
-
-| 3/3/2026 |  |
-
-| 3/3/2026 | <img src="archive/images/2026-03-03/cad66ade.png" width="90" style="vertical-align:middle; margin-right:6px;" />Legacy Strike Cue Piece x1 |
