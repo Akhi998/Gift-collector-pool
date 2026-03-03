@@ -79,33 +79,52 @@ export const collectRewards = async (userUniqueID) => {
   // --------------------------------------------
   while (true) {
   
-    const freeButtonHandle = await page.evaluateHandle(() => {
-      const buttons = Array.from(document.querySelectorAll(".product-list-item button"));
-      return buttons.find(btn =>
-        btn.innerText &&
-        btn.innerText.toUpperCase().includes("FREE")
-      ) || null;
-    });
+    const products = await page.$$(".product-list-item");
+    let foundFree = false;
   
-    const freeButton = freeButtonHandle.asElement();
+    for (const product of products) {
   
-    if (!freeButton) {
-      logger("info", "✅ No more FREE rewards found.");
-      break;
+      const button = await product.$("button");
+      if (!button) continue;
+  
+      const text = await button.evaluate(el =>
+        (el.textContent || "").trim().toUpperCase()
+      );
+  
+      if (text.includes("FREE")) {
+  
+        foundFree = true;
+  
+        // 🔽 Extract reward data BEFORE clicking
+        const name = await product.$eval("h3", el => el.textContent.trim()).catch(() => "Unknown");
+  
+        const imageSrc = await product.$eval("img", el => el.src).catch(() => "");
+  
+        const quantity = await product.$eval(".amount-text", el => el.textContent.trim())
+          .catch(() => "");
+  
+        logger("info", `📦 Reward Found: ${name}`);
+  
+        // Optional: download image to archive
+        const localPath = imageSrc ? await downloadImageToArchive(imageSrc) : "";
+        const imageRef = localPath || imageSrc;
+  
+        // 🔥 PUSH TO ARRAY (THIS WAS MISSING)
+        rewards.push(makeRewardData(imageRef, name, quantity));
+  
+        // Now click
+        await button.click();
+        await new Promise(r => setTimeout(r, 1500));
+  
+        logger("success", `🎉 FREE reward claimed: ${name}`);
+  
+        break; // important: DOM re-renders
+      }
     }
   
-    logger("info", "⏳ Claiming FREE reward...");
-  
-    try {
-      await freeButton.click();
-  
-      // wait safely (modern puppeteer compatible)
-      await new Promise(resolve => setTimeout(resolve, 1500));
-  
-      logger("success", "🎉 FREE reward claimed!");
-    } catch (err) {
-      logger("warn", "⚠ Click failed, retrying...");
-      await new Promise(resolve => setTimeout(resolve, 1000));
+    if (!foundFree) {
+      logger("info", "✅ No more FREE rewards found.");
+      break;
     }
   }
 
