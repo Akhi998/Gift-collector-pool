@@ -85,67 +85,83 @@ export const collectRewards = async (userUniqueID) => {
   // --------------------------------------------
   while (true) {
   
-    const products = await page.$$(".product-list-item");
-    let foundFree = false;
+    const freeButtonHandle = await page.evaluateHandle(() => {
+      const buttons = Array.from(document.querySelectorAll(".product-list-item button"));
+      return buttons.find(btn =>
+        btn.innerText &&
+        btn.innerText.toUpperCase().includes("FREE")
+      ) || null;
+    });
   
-    for (const product of products) {
+    const freeButton = freeButtonHandle.asElement();
   
-      const button = await product.$("button");
-      if (!button) continue;
+    if (!freeButton) {
+      logger("info", "✅ No more FREE rewards found.");
+      break;
+    }
   
-      const text = await button.evaluate(el =>
-        (el.textContent || "").trim().toUpperCase()
+    logger("info", "⏳ Claiming FREE reward...");
+  
+    try {
+  
+      // 🔥 Extract product card BEFORE clicking
+      const productHandle = await freeButton.evaluateHandle(btn =>
+        btn.closest(".product-list-item")
       );
   
-      if (text.includes("FREE")) {
+      const product = productHandle.asElement();
   
-        foundFree = true;
+      let name = "Unknown";
+      let quantity = "";
+      let imageSrc = "";
   
-        // 🔽 Extract reward data BEFORE clicking
-        const name = await product.$eval("h3", el => el.textContent.trim()).catch(() => "Unknown");
+      if (product) {
   
-        const imageSrc = await product.evaluate(prod => {
+        name = await product.$eval("h3", el => el.textContent.trim())
+          .catch(() => "Unknown");
+  
+        quantity = await product.$eval(".amount-text", el => el.textContent.trim())
+          .catch(() => "");
+  
+        // Pick largest image (avoid ℹ️ icon)
+        imageSrc = await product.evaluate(prod => {
           const imgs = Array.from(prod.querySelectorAll("img"));
           if (!imgs.length) return "";
-        
+  
           let best = imgs[0];
           let bestArea = 0;
-        
+  
           for (const img of imgs) {
             const rect = img.getBoundingClientRect();
             const area = rect.width * rect.height;
-        
+  
             if (area > bestArea) {
               bestArea = area;
               best = img;
             }
           }
-        
+  
           return best.src;
         });
-  
-        const quantity = await product.$eval(".amount-text", el => el.textContent.trim())
-          .catch(() => "");
-  
-        logger("info", `📦 Reward Found: ${name}`);
-  
-        // Optional: download image to archive
-        const localPath = imageSrc ? await downloadImageToArchive(imageSrc) : "";
-        const imageRef = localPath || imageSrc;
-  
-        // 🔥 PUSH TO ARRAY (THIS WAS MISSING)
-        rewards.push(makeRewardData(imageRef, name, quantity));
-  
-        // Now click
-        await button.click();
-        await new Promise(r => setTimeout(r, 1500));
-  
-        logger("success", `🎉 FREE reward claimed: ${name}`);
-  
-        break; // important: DOM re-renders
       }
-    }
   
+      logger("info", `📦 Reward Found: ${name}`);
+  
+      // Optional: archive image
+      const localPath = imageSrc ? await downloadImageToArchive(imageSrc) : "";
+      const imageRef = localPath || imageSrc;
+  
+      rewards.push(makeRewardData(imageRef, name, quantity));
+  
+      // 🔥 Now click
+      await freeButton.click();
+  
+      await new Promise(resolve => setTimeout(resolve, 1500));
+  
+      logger("success", `🎉 FREE reward claimed: ${name}`);
+      break;
+  
+    }
     if (!foundFree) {
       logger("info", "✅ No more FREE rewards found.");
       break;
