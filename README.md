@@ -30,3 +30,5 @@
 | 3/9/2026 | <img src="archive/images/2026-03-09/ca13cc8d.png" width="90" style="vertical-align:middle; margin-right:6px;" />Daily Reward - 3/9 x1  ·  <img src="archive/images/2026-03-09/0e1f2491.png" width="90" style="vertical-align:middle; margin-right:6px;" />Opti Shot Cue Piece x1 |
 
 | 3/10/2026 | <img src="archive/images/2026-03-10/77747217.png" width="90" style="vertical-align:middle; margin-right:6px;" />Daily Reward - 3/10 x1  ·  <img src="archive/images/2026-03-10/783156c8.png" width="90" style="vertical-align:middle; margin-right:6px;" />Spin Wizard Cue Piece x1 |
+
+| 3/11/2026 | <img src="archive/images/2026-03-11/4fa7fb60.png" width="90" style="vertical-align:middle; margin-right:6px;" />Daily Reward - 3/11 x1  ·  <img src="archive/images/2026-03-11/eee6d28d.png" width="90" style="vertical-align:middle; margin-right:6px;" />Trickster Cue Piece x1 |
