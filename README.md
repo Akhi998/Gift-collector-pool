@@ -34,3 +34,5 @@
 | 3/11/2026 | <img src="archive/images/2026-03-11/4fa7fb60.png" width="90" style="vertical-align:middle; margin-right:6px;" />Daily Reward - 3/11 x1  ·  <img src="archive/images/2026-03-11/eee6d28d.png" width="90" style="vertical-align:middle; margin-right:6px;" />Trickster Cue Piece x1 |
 
 | 3/12/2026 | <img src="archive/images/2026-03-12/7f5e61ad.png" width="90" style="vertical-align:middle; margin-right:6px;" />Daily Reward - 3/12 1  ·  <img src="archive/images/2026-03-12/7aa63a48.png" width="90" style="vertical-align:middle; margin-right:6px;" />Strike Zone Cue Piece x1 |
+
+| 3/13/2026 | <img src="archive/images/2026-03-13/9c85639c.png" width="90" style="vertical-align:middle; margin-right:6px;" />Daily Reward - 3/13 x1  ·  <img src="archive/images/2026-03-13/a2781179.png" width="90" style="vertical-align:middle; margin-right:6px;" />Power Break Cue Piece x2 |
