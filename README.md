@@ -36,3 +36,5 @@
 | 3/12/2026 | <img src="archive/images/2026-03-12/7f5e61ad.png" width="90" style="vertical-align:middle; margin-right:6px;" />Daily Reward - 3/12 1  ·  <img src="archive/images/2026-03-12/7aa63a48.png" width="90" style="vertical-align:middle; margin-right:6px;" />Strike Zone Cue Piece x1 |
 
 | 3/13/2026 | <img src="archive/images/2026-03-13/9c85639c.png" width="90" style="vertical-align:middle; margin-right:6px;" />Daily Reward - 3/13 x1  ·  <img src="archive/images/2026-03-13/a2781179.png" width="90" style="vertical-align:middle; margin-right:6px;" />Power Break Cue Piece x2 |
+
+| 3/14/2026 | <img src="archive/images/2026-03-14/e400715b.png" width="90" style="vertical-align:middle; margin-right:6px;" />Daily Reward - 3/14 500  ·  <img src="archive/images/2026-03-14/bfdbd72f.png" width="90" style="vertical-align:middle; margin-right:6px;" />Gamechanger Cue Piece x1 |
